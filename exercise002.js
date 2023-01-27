@@ -12,12 +12,21 @@ const fetchDataOld = (apiEndPoint) => {
 const fetchData = async (apiEndPoint) => {
   try {
     const response = await fetch(apiEndPoint);
+    console.log(response);
     const json = await response.json();
-    console.log(json)
-  }catch (error){
+    console.log(JSON.stringify(json))
+  } catch (error) {
     console.log(error);
   }
 };
 
+//fetchData(jsonTypicode);
 
-fetchData(jsonTypicode);
+//Extension
+const ingredient = ['vodka', 'gin', 'tequila', 'chocolate'];
+const api = "http://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
+const random = Math.floor(Math.random() * ingredient.length);
+console.log(ingredient[random]);
+fetchData(api+ encodeURI(ingredient[random]));
+
+
