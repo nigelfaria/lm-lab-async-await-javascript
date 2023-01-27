@@ -19,7 +19,7 @@ const promise = new Promise((resolve, reject) => {
 // 	catch(failValue){
 // 		console.log(`Boo. Promise rejected with response: ${failValue}`);
 // 	}
-	
+
 // }
 
 // getPromise();
@@ -29,6 +29,6 @@ try {
 	const value = await promise;
 	console.log(`Yay! Promise resolved with response: ${value}`)
 }
-catch(failValue){
+catch (failValue) {
 	console.log(`Boo. Promise rejected with response: ${failValue}`);
 }
