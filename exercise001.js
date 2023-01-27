@@ -11,16 +11,24 @@ const promise = new Promise((resolve, reject) => {
 	}
 });
 
-const getPromise = async () => {
-	try {
-		const value = await promise;
-		console.log(`Yay! Promise resolved with response: ${value}`)
-	}
-	catch(failValue){
-		console.log(`Boo. Promise rejected with response: ${failValue}`);
-	}
+// const getPromise = async () => {
+// 	try {
+// 		const value = await promise;
+// 		console.log(`Yay! Promise resolved with response: ${value}`)
+// 	}
+// 	catch(failValue){
+// 		console.log(`Boo. Promise rejected with response: ${failValue}`);
+// 	}
 	
+// }
+
+// getPromise();
+
+// Top Level Await
+try {
+	const value = await promise;
+	console.log(`Yay! Promise resolved with response: ${value}`)
 }
-
-getPromise();
-
+catch(failValue){
+	console.log(`Boo. Promise rejected with response: ${failValue}`);
+}
